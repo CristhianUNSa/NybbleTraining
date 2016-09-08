@@ -2,6 +2,11 @@
 let express = require('express');
 let app = express();
 
+app.use((req, res, next)=>{
+    console.log('request made');
+    next();
+});
+
 app.get('/', (req, res) => {
   console.log('Esto es la ruta /');
   res.send('Hello World!');
