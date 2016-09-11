@@ -9,9 +9,9 @@ let Mixin = InnerComponent => class extends React.Component {
     };
   }
   update() {
-    this.setState({ val: this.state.val + 1 });
+    this.setState({val: this.state.val + 1});
   }
-  componentWillMount() {
+  componentWillMount(){
     console.log('mounting');
   }
   render() {
@@ -21,27 +21,27 @@ let Mixin = InnerComponent => class extends React.Component {
       {...this.props} />
     );
   }
-  componentDidMount() {
+  componentDidMount(){
     console.log('mounted');
   }
-};
+}
 
-const Button = props => <button
-  onClick={props.update}>
-  {props.txt} - {props.val}
-</button>;
+const Button = (props) => <button
+                            onClick={props.update}>
+                            {props.txt} - {props.val}
+                        </button>
 
-const Label = props => <label
-  onMouseMove={props.update}>
-  {props.txt} - {props.val}
-</label>;
+const Label = (props) => <label
+                          onMouseMove={props.update}>
+                          {props.txt} - {props.val}
+                          </label>
 
 let ButtonMixed = Mixin(Button);
 let LabelMixed = Mixin(Label);
 
-class App extends React.Component {
+class App extends React.Component{
 
-  render() {
+  render(){
     return (
       <div>
         <ButtonMixed txt="Button" />
