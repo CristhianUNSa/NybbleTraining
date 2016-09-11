@@ -14,6 +14,6 @@ class Button extends React.Component{
   }
 }
 
-const Heart = ()=> <span className="glyphicon glyphicon-heart"> HH </span>
+const Heart = ()=> <span className="glyphicon glyphicon-heart"><3</span>
 
 export default App;
