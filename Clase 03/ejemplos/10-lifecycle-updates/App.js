@@ -12,7 +12,7 @@ class App extends React.Component {
   update(e) {
     ReactDOM.render(
       <App val={this.props.val +1} />,
-      document.getElementById('app')
+      document.getElementById('app');
     );
   }
   componentWillReceiveProps(nextProps){
