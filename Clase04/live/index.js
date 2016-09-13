@@ -1,6 +1,9 @@
-const Lion = require('./lion');
-const Animal = require('./animal');
+let callbacks = [];
+for (let i = 0; i < 2; i++){
+  callbacks[i] = function(){
+    console.log(i);
+  }
+}
 
-let myLion = new Lion('Lion 1');
-
-myLion.talk();
+callbacks[0]();
+callbacks[1]();
